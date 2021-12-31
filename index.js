@@ -6,6 +6,10 @@ const logger = require("./Middlewares/logger")
 const app = express()
 // app.use(logger)
 
+//Body parser
+app.use(express.json())
+app.use(express.urlencoded({extended:false}))
+
 //All books
 // app.get("/api/books",(req,res)=>{
     // res.json(books)
